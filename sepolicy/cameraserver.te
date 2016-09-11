@@ -1,0 +1,19 @@
+unix_socket_send(cameraserver, camera, camera)
+unix_socket_send(cameraserver, mpdecision, mpdecision)
+allow cameraserver sysfs:dir { read open };
+allow cameraserver sysfs:file { read write getattr open };
+
+allow cameraserver camera:unix_dgram_socket sendto;
+allow cameraserver camera_data_file:sock_file write;
+allow cameraserver scheduling_policy_service:service_manager find;
+allow cameraserver mpdecision_socket:dir r_dir_perms;
+
+# For text relocations in /system/vendor/lib/libmmjpeg.so
+allow cameraserver system_file:file execmod;
+
+# Interact with other media devices
+#allow cameraserver video_device:dir search;
+#allow cameraserver { video_device }:file rw_file_perms;
+#allow cameraserver camera_data_file:file rw_file_perms;
+
+#allow cameraserver { video_device ion_device }:chr_file read;

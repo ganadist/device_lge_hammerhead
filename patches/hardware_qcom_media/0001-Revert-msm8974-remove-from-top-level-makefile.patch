@@ -1,0 +1,40 @@
+From bd6fab738244ab7e38133a1a343786826c682b32 Mon Sep 17 00:00:00 2001
+From: Young-Ho Cha <ganadist@gmail.com>
+Date: Fri, 16 Sep 2016 01:19:38 +0900
+Subject: [PATCH] Revert "msm8974: remove from top level makefile"
+
+This reverts commit 9e8b76d32ece15e79ebf4b02ede869d89807eec6.
+---
+ Android.mk | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/Android.mk b/Android.mk
+index 80a91fc..ea3fb44 100644
+--- a/Android.mk
++++ b/Android.mk
+@@ -8,7 +8,7 @@ ifneq ($(TARGET_BOARD_AUTO),true)
+     QCOM_MEDIA_ROOT := $(call my-dir)/msm8974
+   endif
+ 
+-  ifneq ($(filter msm8610 msm8226 msm8960 msm8660 msm7627a msm7630_surf msm8084 msm8952 msm8992 msm8994 msm8996,$(TARGET_BOARD_PLATFORM)),)
++  ifneq ($(filter msm8610 msm8226 msm8974 msm8960 msm8660 msm7627a msm7630_surf msm8084 msm8952 msm8992 msm8994 msm8996,$(TARGET_BOARD_PLATFORM)),)
+     include $(QCOM_MEDIA_ROOT)/mm-core/Android.mk
+     include $(QCOM_MEDIA_ROOT)/libstagefrighthw/Android.mk
+   endif
+@@ -17,11 +17,11 @@ ifneq ($(TARGET_BOARD_AUTO),true)
+     include $(QCOM_MEDIA_ROOT)/mm-video-legacy/Android.mk
+   endif
+ 
+-  ifneq ($(filter msm8610 msm8226 msm8084 msm8952 msm8992 msm8994 msm8996,$(TARGET_BOARD_PLATFORM)),)
++  ifneq ($(filter msm8610 msm8226 msm8974 msm8084 msm8952 msm8992 msm8994 msm8996,$(TARGET_BOARD_PLATFORM)),)
+     include $(QCOM_MEDIA_ROOT)/mm-video-v4l2/Android.mk
+   endif
+ 
+-  ifneq ($(filter msm8610 msm8226 msm8960 msm8084 msm8952 msm8992 msm8994 msm8996,$(TARGET_BOARD_PLATFORM)),)
++  ifneq ($(filter msm8610 msm8226 msm8974 msm8960 msm8084 msm8952 msm8992 msm8994 msm8996,$(TARGET_BOARD_PLATFORM)),)
+     include $(QCOM_MEDIA_ROOT)/libc2dcolorconvert/Android.mk
+   endif
+ endif
+-- 
+2.9.3
+
