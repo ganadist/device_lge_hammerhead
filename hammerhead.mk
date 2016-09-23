@@ -1,35 +1,5 @@
-# override package for reduce system image
-PRODUCT_PACKAGES := \
-	BooksStub \
-	CalendarGoogleStub \
-	CloudPrintStub \
-	DriveStub \
-	EditorsDocsStub \
-	EditorsSheetsStub \
-	EditorsSlidesStub \
-	FitStub \
-	HangoutsStub \
-	KeepStub \
-	MapsStub \
-	Music2Stub \
-	NewsstandStub \
-	NewsWeatherStub \
-	PhotosStub \
-	PlayGamesStub \
-	PlusOneStub \
-	TranslateStub \
-	VideosStub \
-	WebViewGoogleStub \
-	YouTubeStub \
-
 PRODUCT_PACKAGES += \
-	PartnerBookmarksProvider \
-	CellBroadcastReceiver \
 	Stk \
-
-PRODUCT_PACKAGES += \
-	FakeNexusLayout \
-	FakeNexusProvision \
 
 #PRODUCT_PACKAGES += \
 	mpcpusetd \
@@ -37,6 +7,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGE_OVERLAYS := \
     device/lge/hammerhead/overlay-hammerhead
 
+$(call inherit-product, vendor/google/product/gapps-stubs.mk)
 $(call inherit-product, vendor/fake_nexus/product/fake_nexus.mk)
 $(call inherit-product, device/lge/hammerhead/full_hammerhead.mk)
 
