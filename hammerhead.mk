@@ -1,5 +1,6 @@
 PRODUCT_PACKAGES += \
 	Stk \
+	TimeService \
 
 #PRODUCT_PACKAGES += \
 	mpcpusetd \
