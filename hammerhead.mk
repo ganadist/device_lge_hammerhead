@@ -24,9 +24,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
 	media.stagefright.legacyencoder=1 \
-	media.stagefright.less-secure=1 \
-	media.stagefright.extractremote=0 \
-	media.stagefright.codecremote=0 \
 
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 PRODUCT_AAPT_PREBUILT_DPI := xxhdpi xhdpi hdpi
