@@ -36,3 +36,11 @@ PRODUCT_RESTRICT_VENDOR_FILES := false
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 	ro.product.name=$(PRODUCT_NAME) \
+
+PRODUCT_PACKAGES += \
+	NexusWallpapers \
+	WallpapersUsTwo \
+
+# These packages requires api level 25.
+#	NexusLauncherIcons \
+#	WallpapersBReel \
