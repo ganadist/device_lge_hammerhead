@@ -9,6 +9,7 @@ PRODUCT_PACKAGE_OVERLAYS := \
     device/lge/hammerhead/overlay-hammerhead
 
 $(call inherit-product, vendor/google/product/gapps-stubs.mk)
+$(call inherit-product, vendor/fake_nexus/product/fake_pixel.mk)
 $(call inherit-product, vendor/fake_nexus/product/fake_nexus.mk)
 $(call inherit-product, device/lge/hammerhead/full_hammerhead.mk)
 
@@ -41,6 +42,5 @@ PRODUCT_PACKAGES += \
 	NexusWallpapers \
 	WallpapersUsTwo \
 
-# These packages requires api level 25.
-#	NexusLauncherIcons \
+# cannot work live earth wallpaper on armv7
 #	WallpapersBReel \
