@@ -1,4 +1,4 @@
-From 76b66d42ea57eda4537b174fa28a592e379b1014 Mon Sep 17 00:00:00 2001
+From c3d990f72f0e50f5c3eb695c250950cce17408f0 Mon Sep 17 00:00:00 2001
 From: YOUNG HO CHA <youngho.cha@windriver.com>
 Date: Thu, 8 Sep 2016 18:22:13 +0900
 Subject: [PATCH 2/3] Revert "msm8974: deprecate msm8974"
@@ -22864,5 +22864,5 @@ index 0000000..268bf81
 +}; // namespace qService
 +#endif // ANDROID_QSERVICE_H
 -- 
-2.9.3
+2.10.2
 

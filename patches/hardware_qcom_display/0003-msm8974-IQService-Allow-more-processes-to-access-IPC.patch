@@ -1,4 +1,4 @@
-From 79aa277ab21cd4741b9655323aa8e2f034b5b9a3 Mon Sep 17 00:00:00 2001
+From 600f6206318604f1562a8eebe944d442cb51fa1b Mon Sep 17 00:00:00 2001
 From: YOUNG HO CHA <ganadist@gmail.com>
 Date: Fri, 9 Sep 2016 13:36:22 +0900
 Subject: [PATCH 3/3] msm8974: IQService: Allow more processes to access IPC
@@ -42,5 +42,5 @@ index d9aa735..b764a1d 100644
      switch(code) {
          case SECURING: {
 -- 
-2.9.3
+2.10.2
 
